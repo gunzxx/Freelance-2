@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800");
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800");
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +24,14 @@ main{
     justify-content: start;
     align-items: center;
 }
+
+
+/* Utility */
+.form-group:has(label.error) input, .form-group:has(label.error) textarea{
+    border: 1px solid rgba(236, 76, 73);
+    box-shadow: 0 0 15px rgba(236, 76, 73,.1);
+}
+/* Utility end */
 
 
 /* Header */
@@ -127,7 +136,7 @@ a:hover{
 }
 
 
-
+/* Footer */
 footer{
     background: transparent !important;
     padding: 7px;
@@ -140,4 +149,125 @@ footer *{
 footer p{
     background: transparent !important;
     margin-left: 0 !important;
+}
+
+
+/* Help button */
+.help-button{
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    border: none;
+    background: #11f615;
+    color: #126214;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.help-button svg{
+    height: 20px;
+}
+
+
+/* Help form */
+.help-container{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 540px;
+    width: 335px;
+    background: white;
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+.help-header{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #11f615;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+.help-header .help-close{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+.help-header .help-close:hover{
+    background: rgba(0,0,0,.2);
+}
+
+#form-help-container{
+    width: 100%;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#form-help-container .form-control {
+    padding: 10px;
+}
+.sub-form-help-container{
+    width: 100%;
+    padding: 15px;
+    height: 100%;
+    overflow-y: scroll;
+}
+label.error {
+    color: #ec4c49;
+    font-size: 12px;
+    border-color: #ebccd1;
+    padding: 1px 20px 1px 20px;
+}
+.sub-form-help-container::-webkit-scrollbar{
+    width: 10px;
+}
+.sub-form-help-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: 10px;
+}
+.sub-form-help-container::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 100px;
+    background: #d8dcde;
+}
+.sub-form-help-container::-webkit-scrollbar-corner{
+    border-radius: 20px;
+}
+.sub-form-help-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.help-footer{
+    min-height: 65px;
+    height: 65px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 15px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,.1);
+}
+.help-footer button{
+    outline: none;
+    border: none;
+    padding: 9px 16px;
+    background: #2f3941;
+    color: white;
+    border-radius: 5px;
 }
