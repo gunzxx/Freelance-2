@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Siswa • KIP Kuliah</title>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <div class="header-container">
+            <a href=""><img src="./img/logo.png" alt=""></a>
+            <h3>KARTU INDONESIA PINTAR KULIAH</h3>
+        </div>
+        <div class="card-container">
+            <form class="form-container">
+                <div class="form-group">
+                    <label for="no_pendaftaran">No. Pendaftaran</label>
+                    <div class="form-control">
+                        <div class="icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input placeholder="No. Pendaftaran" type="text" name="no-reg" id="no_pendaftaran">
+                    </div>
+                </div>
+                <div id="show_hide_password" class="form-group">
+                    <label for="no-reg">Kode Akses</label>
+                    <div class="form-control">
+                        <div class="icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <input placeholder="Kode Akses" type="password" name="access-code" id="access-code">
+                        <div class="icon" id="icon-hide">
+                            <i class="far fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a href="">Lupa No. Pendaftaran/Kode Akses?</a>
+                </div>
+                <div class="clearfix">
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-flat btn-primary btn-block"><i class="fas fa-sign-in-alt"></i>
+                            Masuk</button>
+                    </div>
+                    <div class="border border-primary rounded mt-2 p-2 text-center">
+                        Belum punya akun? <a href="https://kip-kuliah.kemdikbud.go.id/siswa/pendaftaran/baru">Daftar baru</a>
+                    </div>
+                </div>
+                <hr class="my-1">
+                <div class="footer-form">
+                    <p>Belum menerima email akun? <a href="https://kip-kuliah.kemdikbud.go.id/siswa/pendaftaran/resend-email">Kirim ulang email</a></p>
+                    <p class="p2">Sudah daftar tapi salah input email? <a href="https://kip-kuliah.kemdikbud.go.id/siswa/auth/claim-account">Klaim akun saya</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <footer>
+            <p class="main-footer">
+                © 2023
+                <span id="program-info-text" title="KIPK">
+                    KIP Kuliah
+                </span>|
+                <span id="lembaga-info-text" title="Pusat Layanan Pembiayaan Pendidikan; Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia">
+                    Puslapdik, Kemdikbudristek RI
+                </span>
+            </p>
+        </footer>
+    </main>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.inputmask.bundle.min.js"></script>
+    <script defer src="./js/all.min.js"></script>
+    <script defer src="./js/script.js"></script>
+</body>
+</html>
