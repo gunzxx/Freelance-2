@@ -52,7 +52,7 @@ $(document).ready(function () {
                 required: "Harap isi data",
                 number: "Data harus angka",
             },
-            nisn: {
+            description: {
                 required: "Harap isi data",
             },
         },
